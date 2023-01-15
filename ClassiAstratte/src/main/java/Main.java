@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
     //jesus wept commit3
     public static void main(String[] args) {
-       
+
         System.out.println("\n");
         SalutoMaschile pino = new SalutoMaschile("Pino");
 
