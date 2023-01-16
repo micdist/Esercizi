@@ -12,12 +12,14 @@ public class Main {
         outcome = GestoreFile.creaFile(new File("C://Users/mdistefano/Desktop/fileTxt1.txt"));
         System.out.println("esito 1: " + outcome);
         outcome = GestoreFile.creaFile(new File("C://Users/mdistefano/Desktop/fileTxt2.txt"));
-        System.out.println("esito 1: " + outcome);
+        System.out.println("esito 2: " + outcome);
         outcome = GestoreFile.creaFile(new File("C://Users/mdistefano/Desktop/fileCsv1.csv"));
-        System.out.println("esito 1: " + outcome);
+        System.out.println("esito 3: " + outcome);
 
         GestoreFile.cancellaFile("C://Users/mdistefano/Desktop/");
 
+        outcome = GestoreFile.scriviRiga(new File("C://Users/mdistefano/Desktop/fileTxt1.txt")," ciao ciao con spazi      ");
+        System.out.println("esito 4: " + outcome);
 
 
 
