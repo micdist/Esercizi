@@ -22,6 +22,16 @@ public class Main {
         System.out.println("esito 4: " + outcome);
 
 
-
+        File fileLeggere = new File("C://Users/mdistefano/Desktop/fileTxt2.txt");
+        String riga = "";
+        riga = GestoreFile.leggiRiga(fileLeggere);
+        StringBuilder sb = new StringBuilder("esito 5: ");
+        if (riga==null||riga.trim().isEmpty()){
+            sb.append("false.");
+        }else{
+            sb.append("true, ");
+        }
+        sb.append(riga);
+        System.out.println(sb);
     }
 }

@@ -1,7 +1,4 @@
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.List;
@@ -75,11 +72,38 @@ public class GestoreFile {
                 System.out.println("problemi chiusura bufferedWriter: " + ex);
             }
         }
-
-
-
-
         return esito;
+    }
+
+    public static String leggiRiga(File file){
+        BufferedReader br = null;
+        String riga = "";
+        if (!file.exists()){
+            System.out.println("file insesitente");
+            return riga;
+        }
+        try{
+            FileReader fr = new FileReader(file);
+            br = new BufferedReader(fr);
+            riga = br.readLine();
+            if (riga==null || riga.trim().isEmpty()){
+                System.out.println("niente da leggere");
+                return " ";
+            }
+
+        }catch (IOException e){
+           e.printStackTrace();
+        }
+        finally {
+            try{
+                if (br!=null){
+                    br.close();
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        return riga;
     }
 
 }
